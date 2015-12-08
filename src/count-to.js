@@ -28,9 +28,9 @@ var countTo = angular.module('countTo', [])
                         if (step >= steps) {
                             $timeout.cancel(scope.timoutId);
                             num = countTo;
-                            e.textContent = countTo;
+                            e.textContent = $filter('number')(countTo);
                         } else {
-                            e.textContent = Math.round(num);
+                            e.textContent = $filter('number')(num, 0);
                             tick();
                         }
                     }, refreshInterval);
