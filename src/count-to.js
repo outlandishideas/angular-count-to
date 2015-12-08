@@ -1,5 +1,5 @@
 var countTo = angular.module('countTo', [])
-    .directive('countTo', ['$timeout', function ($timeout) {
+    .directive('countTo', ['$timeout', '$filter', function ($timeout, $filter) {
         return {
             replace: false,
             scope: true,
